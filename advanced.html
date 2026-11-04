@@ -3,9 +3,37 @@
     <head>
         <title>HTML Advanced notes</title>
         <meta charset="UTF-8">
+        <style>
+            /* Cascading Stryle sheets
+            1. Selsector => says what to change
+            2. Declaration =>
+            a. property => what about the thing to change
+            b. value => how to change it
+            */
+            body{
+                color:rgb(119, 0, 255);
+                background-color:rgb(255, 238, 0);
+                border: inset 5px #00ff0d;
+            }
+            h1{
+                text-align: center;
+            }
+            #best{
+                color:forestgreen;
+                text-decoration:underline;
+            }
+            .lists{
+                width: 50%;
+                background-color:
+                orange;
+                border-radius: 5px;
+                font-size: .5rem;
+            }
+        </style>
     </head>
     <body>
         <h1>Html Advanced notes</h1>
+        <div class="lists">
         <h3>Lists:</h3>
         <ol type="I">
             <li>Warren</li>
@@ -14,14 +42,14 @@
             <li>Marcy</li>
             <li>Levi</li>
             <li>Kam</li>
-            <li>Caleb</li>
+            <li id="best">Caleb</li>
             <li>Marissa</li>
             <li>Remy</li>
             <li>Chloe</li>
             <li>Andi</li>
             <li>Daisy</li>
-            <li>Future Baby Brother</li>
-            <li>Copper</li>
+            <li id="exciting">Future Baby Brother</li>
+            <li id="nicest">Copper</li>
         </ol>
         <ul>
             <li><a href="https://www.ebay.com/itm/393434608114" target="_blank">Kai </a></li>
@@ -38,6 +66,7 @@
             <dd>Hanukkah</dd>
             <dd>New Years</dd>
         </dl>
+        </div>
         <h3>Attributes: </h3>
         <div>
         <a href="https://www.ebay.com/itm/393434608114" target="_blank"><img src="Kai.jpg" alt="Kai" width="500px"></a>
