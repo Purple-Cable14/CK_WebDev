@@ -12,8 +12,6 @@
                 margin: 50px;
             }
             img{
-                width: 100px;
-                height: 100px;
                 display: flex;
                 flex-wrap: nowrap;
                 flex-direction: row;
@@ -25,14 +23,35 @@
                 padding: 50px;
             }
             #img1{
+                width: 100px;
+                height: 100px;
                 float: left;
                 margin: 10px;
             }
             #img2{
+                width: 100px;
+                height: 100px;
                 float: left;
                 margin: 10px;
             }
+            button{
+                margin: 20px;
+            }
         </style>
+        <script>
+            function clickbutton() {
+                let element=document.getElementById("button")
+                
+            }
+            function mouse1() {
+                let element=document.getElementById("logo")
+                element.style.border="5px solid red"
+            }
+            function mouse2() {
+                let element=document.getElementById("logo")
+                element.style.border="0px solid red"
+            }
+        </script>
     </head>
     <body>
         <div class="text">
@@ -80,7 +99,6 @@
             <p>Image from Flickr</p>
             </div>
         </ul>
-        <button onclick="changeColor">Click Me for Breakdown<br> of Ninjago show.</button>
         <br>
         <br>
         <br>
@@ -93,6 +111,12 @@
         <br>
         <br>
         <br>
-        <h3>Quick breakdown of Ninjago</h3>
-        <p>There has been about 20 seasons of Ninjago includeing the pilots, and discludeing the other special/mini seasons/specials. These seasons have been running from january of 2011 to present day, so its been on for over 15 years. The first 2 seasons were intended to be the only seasons, but the fans of ninjago, so Wilfilm made a rebooted season, followed by many more to come. The first ten seasons were made by Wilfilm, and they had their own ending with the Oni trilogy, which was the last 3 seasons of the first 10, and this trilogy is considered some of the best, or some of the worst depending on who you ask. 5 more seasons were made by seperate group, which had their own ending, which referenced many allies made through the first 15 seasons. Currently there is one more set of seasons called Dragons Rising, which has 4 seasons currently and is still going. In the long run, Ninjago has being ever-growing and evolveing, and I doubt it will end any time soon because Ninjago is going to make an anime call Ninjago Legends.</p>
+        <button id="button" onclick="clickbutton()">Click Me for Breakdown<br> of Ninjago show.</button>
+        <div class="text">
+            <div class="forbutton">
+            <h3>Quick breakdown of Ninjago</h3>
+            <p>There has been about 20 seasons of Ninjago includeing the pilots, and discludeing the other special/mini seasons/specials. These seasons have been running from january of 2011 to present day, so its been on for over 15 years. The first 2 seasons were intended to be the only seasons, but the fans of ninjago, so Wilfilm made a rebooted season, followed by many more to come. The first ten seasons were made by Wilfilm, and they had their own ending with the Oni trilogy, which was the last 3 seasons of the first 10, and this trilogy is considered some of the best, or some of the worst depending on who you ask. 5 more seasons were made by seperate group, which had their own ending, which referenced many allies made through the first 15 seasons. Currently there is one more set of seasons called Dragons Rising, which has 4 seasons currently and is still going. In the long run, Ninjago has being ever-growing and evolveing, and I doubt it will end any time soon because Ninjago is going to make an anime call Ninjago Legends.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Lego_Ninjago_logo.type.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Ninjago Logo" id="logo" onmouseover="mouse1()" onmouseout="mouse2()">
+            </div>
+        </div>
     </body>
