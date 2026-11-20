@@ -105,7 +105,7 @@
         <div id="text2">
             <h3 id="forbutton">Quick breakdown of Ninjago</h3>
             <p id="forbutton">There has been about 20 seasons of Ninjago includeing the pilots, and discludeing the other special/mini seasons/specials. These seasons have been running from january of 2011 to present day, so its been on for over 15 years. The first 2 seasons were intended to be the only seasons, but the fans of ninjago, so Wilfilm made a rebooted season, followed by many more to come. The first ten seasons were made by Wilfilm, and they had their own ending with the Oni trilogy, which was the last 3 seasons of the first 10, and this trilogy is considered some of the best, or some of the worst depending on who you ask. 5 more seasons were made by seperate group, which had their own ending, which referenced many allies made through the first 15 seasons. Currently there is one more set of seasons called Dragons Rising, which has 4 seasons currently and is still going. In the long run, Ninjago has being ever-growing and evolveing, and I doubt it will end any time soon because Ninjago is going to make an anime call Ninjago Legends.
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Lego_Ninjago_logo.type.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Ninjago Logo" id="logo" onmouseover="hover()">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Lego_Ninjago_logo.type.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Ninjago Logo" id="logo" onmouseout="changeImage()">
             </p>
         </div>
         <script>
@@ -123,6 +123,35 @@
                     item.style.display="grid"
                 }
             }
-            
+            function show(){
+            let images = ["https://live.staticflickr.com/5111/7385797798_a27618aed7_b.jpg","https://live.staticflickr.com/7168/6653205505_6a4a739f36_b.jpg","https://live.staticflickr.com/868/41755428251_8f47dc729d_b.jpg","https://live.staticflickr.com/8368/8390180647_0e76bacffd_b.jpg","https://upload.wikimedia.org/wikipedia/commons/8/89/Lego_Ninjago_logo.type.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"]
+            let currentimage = 0
+        }
+            function rotate(){
+                currentimage += 1
+                document.getElementById("logo").src = images[currentimage]
+                if (currentimage >4){
+                    currentimage = 0
+                }
+            }
+            function show(){
+                let element = document.getElementById("hidden")
+                if (element.style.display == "flex"){
+                    element.style.display = "none"
+                    document.getElementById("showMore").innerHTML = "Show More"
+                }else{
+                    element.style.display = "flex"
+                    document.getElementById("showMore").innerHTML = "Show Less"
+                }
+            }
+            let images = ["https://live.staticflickr.com/5111/7385797798_a27618aed7_b.jpg","https://live.staticflickr.com/7168/6653205505_6a4a739f36_b.jpg","https://live.staticflickr.com/868/41755428251_8f47dc729d_b.jpg","https://live.staticflickr.com/8368/8390180647_0e76bacffd_b.jpg","https://upload.wikimedia.org/wikipedia/commons/8/89/Lego_Ninjago_logo.type.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"]
+                let current = 0
+                function changeImage(){
+                    current += 1
+                    if (current > 4){
+                    current = 0
+                }
+                document.getElementById("logo").src = images[current]
+            }
         </script>
     </body>
